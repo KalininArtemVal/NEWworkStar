@@ -22,7 +22,7 @@ class Radar: SpaceObject, Togglable {
     
     private enum  Constants {
         //увеличиваем скорость для более быстрого отображения на дисплее
-        static let timeInterval: TimeInterval = 0.5
+        static let timeInterval: TimeInterval = 0.1
     }
     
     private enum Status: Togglable {

@@ -27,6 +27,9 @@ struct LazerBlaster: Weapons {
 
 //Добавить структуру FORCE: JEDIForce
 struct Force: JEDIForce {
+    func useTheForce() throws {
+        print("good")
+    }  
     func fire() throws {
         print("good")
     }

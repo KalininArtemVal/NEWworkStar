@@ -48,7 +48,7 @@ protocol JEDIForce {
         var damage: Int { get }
         var distance: Int { get }
         var ammunition: Int { get set }
-        mutating func fire() throws
+        mutating func useTheForce() throws
 }
 
 //Делаем расширение и используем обработку ошибок
