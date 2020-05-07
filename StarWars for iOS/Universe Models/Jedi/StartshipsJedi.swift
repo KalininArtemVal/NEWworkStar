@@ -76,3 +76,20 @@ extension LukeSkywalker: RadarObserver {
         }
     }
 }
+
+class GeneralAkbar: StarshipImp {
+    private enum Constants {
+        static let health = 100
+    }
+    init(coordinate: Point) {
+        super.init(name: "General Akbar",
+                   fraction: .rebels,
+                   coordinate: coordinate,
+                   weapons: [SuperLazer(distance: 10)],
+                   force: [JEDIForce].init())
+        health = Constants.health
+    }
+    deinit {
+        print("\nЭто ловушка!")
+    }
+}

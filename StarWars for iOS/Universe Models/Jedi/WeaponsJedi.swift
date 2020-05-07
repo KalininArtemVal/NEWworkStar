@@ -35,7 +35,7 @@ struct Force: JEDIForce {
     }
     
     var name: String = "Force"
-    var damage: Int = 10000
+    var damage: Int = 100
     var distance: Int
     var ammunition: Int = 1
 }

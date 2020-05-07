@@ -28,6 +28,13 @@ class GamePlay {
                 
         space.add(object: xWing)
         
+        // добавляем в игру Генерала Акбара
+        
+        let generalAkbarPoint = Point.generate()
+        let generalAkbar = GeneralAkbar(coordinate: generalAkbarPoint)
+        generalAkbar.shootHandler = space
+        space.add(object: generalAkbar)
+        
         // добавляем в игру Скайуокера и Звездный разрушитель
         
         let starDestroyerPoint = Point.generate()
@@ -37,7 +44,7 @@ class GamePlay {
         
         let LukeSkywalkerPoint = Point.generate()
         let lukeSkywalker = LukeSkywalker(coordinate: LukeSkywalkerPoint)
-        lukeSkywalker.forceSpirit = space
+        lukeSkywalker.shootHandler = space
         space.add(object: lukeSkywalker)
         
         let radarPoint = Point.generate()

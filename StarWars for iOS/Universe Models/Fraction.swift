@@ -9,4 +9,5 @@
 enum Fraction {
     case jedi
     case empare
+    case rebels
 }
