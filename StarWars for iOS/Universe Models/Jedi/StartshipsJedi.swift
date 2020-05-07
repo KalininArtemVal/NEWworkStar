@@ -56,7 +56,8 @@ class LukeSkywalker: StarshipImp {
         super.init(name: "Luke Skywalker",
                    fraction: .jedi,
                    coordinate: coordinate,
-                   weapons: [SuperLazer(distance: 10)], force: [JEDIForce].init())
+                   weapons: [SuperLazer(distance: 10)],
+                   force: [JEDIForce].init())
         health = Constants.health
     }
     
