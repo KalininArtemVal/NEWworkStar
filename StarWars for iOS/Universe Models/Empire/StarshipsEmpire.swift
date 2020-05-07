@@ -41,7 +41,7 @@ class StarDestroyer: StarshipImp {
         super.init(name: "Star Destroyer",
                    fraction: .empare,
                    coordinate: coordinate,
-                   weapons: [SuperLazer(distance: 10)],
+                   weapons: [Lazer(distance: 10), Bomb(distance: 10)],
                    force: [JEDIForce].init())
         health = Constants.health
     }

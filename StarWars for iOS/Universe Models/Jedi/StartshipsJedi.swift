@@ -22,7 +22,7 @@ class XWing: StarshipImp {
         super.init(name: "X Wing",
                    fraction: .jedi,
                    coordinate: coordinate,
-                   weapons: [SuperLazer(distance: 100)],
+                   weapons: [LazerBlaster(distance: 10)],
                    force: [JEDIForce].init())
         health = Constants.health
     }
@@ -56,7 +56,7 @@ class LukeSkywalker: StarshipImp {
         super.init(name: "Luke Skywalker",
                    fraction: .jedi,
                    coordinate: coordinate,
-                   weapons: [SuperLazer(distance: 10)],
+                   weapons: [Bomb(distance: 10)],
                    force: [JEDIForce].init())
         health = Constants.health
     }
@@ -92,5 +92,17 @@ class GeneralAkbar: StarshipImp {
     }
     deinit {
         print("\nЭто ловушка!")
+    }
+}
+
+extension GeneralAkbar: RadarObserver {
+    func detected(object: SpaceObject) {
+        do {
+            try useTheForce(to: object.coordinate)
+        } catch WeaponsError.isEmpty {
+            print("Нет патронов!")
+        } catch {
+            print("Ошибка не известна")
+        }
     }
 }

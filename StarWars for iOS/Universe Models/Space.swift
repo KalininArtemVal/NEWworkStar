@@ -86,7 +86,6 @@ extension Space: Displayable {
 }
 
 
-//
 extension Space: ForceSpirit {
     func useTheForce(from force: JEDIForce, to coordinate: Point) {
         guard var spaceObject = objects.first(where: { $0.coordinate == coordinate })  else {
@@ -99,4 +98,5 @@ extension Space: ForceSpirit {
         }
     }
 }
+
 

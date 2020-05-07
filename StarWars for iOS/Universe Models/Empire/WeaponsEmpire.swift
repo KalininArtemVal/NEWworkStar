@@ -9,7 +9,7 @@
 import Foundation
 
 struct SuperLazer: Weapons {
-    var distance: Int = 10
+    var distance: Int = 100
     var name: String = "Ultimate super lazer"
     var damage: Int = 10000
     var rateOfFire: Int = 1

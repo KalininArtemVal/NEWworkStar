@@ -38,17 +38,17 @@ extension Weapons {
             throw WeaponsError.isEmpty
         }
         ammunition -= 1
-        print("\nПульнул!")
+        print("\nПульнул! А чем? \(name)")
     }
 }
 
 // Создали протокол Сила джедая
 protocol JEDIForce {
     var name: String { get }
-        var damage: Int { get }
-        var distance: Int { get }
-        var ammunition: Int { get set }
-        mutating func useTheForce() throws
+    var damage: Int { get }
+    var distance: Int { get }
+    var ammunition: Int { get set }
+    mutating func useTheForce() throws
 }
 
 //Делаем расширение и используем обработку ошибок

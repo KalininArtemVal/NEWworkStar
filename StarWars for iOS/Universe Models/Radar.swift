@@ -22,7 +22,7 @@ class Radar: SpaceObject, Togglable {
     
     private enum  Constants {
         //увеличиваем скорость для более быстрого отображения на дисплее
-        static let timeInterval: TimeInterval = 0.1
+        static let timeInterval: TimeInterval = 0.5
     }
     
     private enum Status: Togglable {
@@ -93,7 +93,7 @@ class Radar: SpaceObject, Togglable {
         if let objects = datasource?.expose(for: rect), !objects.isEmpty {
             print("Ага! Попался \(objects)")
             if let starship = objects.first as? StarshipImp,
-            starship.fraction == .empare {
+                starship.fraction == .empare {
                 observer?.detected(object: starship)
             }
         }

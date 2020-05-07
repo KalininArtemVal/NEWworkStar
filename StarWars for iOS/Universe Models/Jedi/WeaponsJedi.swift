@@ -10,7 +10,7 @@ import Foundation
 
 struct Bomb: Weapons {
     var distance: Int = 10
-    var name: String = "Lazer Blaster"
+    var name: String = "Bomb"
     var damage: Int = 100
     var rateOfFire: Int = 2
     var ammunition: Int = 2
@@ -27,13 +27,6 @@ struct LazerBlaster: Weapons {
 
 //Добавить структуру FORCE: JEDIForce
 struct Force: JEDIForce {
-    func useTheForce() throws {
-        print("good")
-    }  
-    func fire() throws {
-        print("good")
-    }
-    
     var name: String = "Force"
     var damage: Int = 100
     var distance: Int
