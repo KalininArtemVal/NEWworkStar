@@ -85,7 +85,7 @@ class Radar: SpaceObject, Togglable {
         timer?.invalidate()
         timer = nil
     }
-        
+  // Переключаем радар на поиск Адмирала Акбара
     @objc
     private func sendSignal() {
         let rect = Rect.generate()
@@ -93,8 +93,13 @@ class Radar: SpaceObject, Togglable {
         if let objects = datasource?.expose(for: rect), !objects.isEmpty {
             print("Ага! Попался \(objects)")
             if let starship = objects.first as? StarshipImp,
-                starship.fraction == .empare {
+                starship.fraction == .rebels {
                 observer?.detected(object: starship)
+            } else {
+                if let starship1 = objects.first as? StarshipImp,
+                starship1.fraction == .empare {
+                observer?.detected(object: starship1)
+            }
             }
         }
     }

@@ -51,12 +51,16 @@ protocol JEDIForce {
     mutating func useTheForce() throws
 }
 
+enum ForceError: Error {
+    case isEmpty
+}
+
 //Делаем расширение и используем обработку ошибок
 extension JEDIForce {
     mutating func useTheForce() throws {
        guard ammunition > 0 else {
         print("\(name) Исчерпал свою силу!")
-            throw WeaponsError.isEmpty
+            throw ForceError.isEmpty
         }
         ammunition -= 100
         print("\nИспользуй силу Люк!")

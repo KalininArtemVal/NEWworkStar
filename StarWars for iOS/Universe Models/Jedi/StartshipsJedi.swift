@@ -56,7 +56,7 @@ class LukeSkywalker: StarshipImp {
         super.init(name: "Luke Skywalker",
                    fraction: .jedi,
                    coordinate: coordinate,
-                   weapons: [Bomb(distance: 10)],
+                   weapons: [Bomb(distance: 10), LazerBlaster(distance: 10)],
                    force: [JEDIForce].init())
         health = Constants.health
     }
@@ -78,12 +78,12 @@ extension LukeSkywalker: RadarObserver {
     }
 }
 
-class GeneralAkbar: StarshipImp {
+class AdmiralAkbar: StarshipImp {
     private enum Constants {
         static let health = 100
     }
     init(coordinate: Point) {
-        super.init(name: "General Akbar",
+        super.init(name: "Admiral Akbar",
                    fraction: .rebels,
                    coordinate: coordinate,
                    weapons: [SuperLazer(distance: 10)],
@@ -95,11 +95,11 @@ class GeneralAkbar: StarshipImp {
     }
 }
 
-extension GeneralAkbar: RadarObserver {
+extension AdmiralAkbar: RadarObserver {
     func detected(object: SpaceObject) {
         do {
             try useTheForce(to: object.coordinate)
-        } catch WeaponsError.isEmpty {
+        } catch ForceError.isEmpty {
             print("Нет патронов!")
         } catch {
             print("Ошибка не известна")

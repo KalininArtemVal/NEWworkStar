@@ -29,6 +29,7 @@ struct LazerBlaster: Weapons {
 struct Force: JEDIForce {
     var name: String = "Force"
     var damage: Int = 100
-    var distance: Int
+    var distance: Int = 10
+    var rateOfFire: Int = 1
     var ammunition: Int = 1
 }
