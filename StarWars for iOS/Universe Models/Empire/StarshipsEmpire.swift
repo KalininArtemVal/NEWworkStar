@@ -46,6 +46,6 @@ class StarDestroyer: StarshipImp {
         health = Constants.health
     }
     deinit {
-        print("\(name) унечтожен! Империя пала!")
+        print("\(name) уничтожен! Империя пала!")
     }
 }

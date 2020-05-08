@@ -16,13 +16,13 @@ class GamePlay {
     
     func play() {
         print("""
-        Давным-давно... в далекой галактике
+        Давным-давно... в далекой галактике...
         Star Wars
         Episode IV
         Новая Надежда
 
         """)
-        
+        //shootHandler
         let deathStarPoint = Point.generate()
         let deathStar = DeathStar(coordinate: deathStarPoint)
         deathStar.shootHandler = space
@@ -38,7 +38,7 @@ class GamePlay {
         
         let admiralAkbarPoint = Point.generate()
         let admiralAkbar = AdmiralAkbar(coordinate: admiralAkbarPoint)
-        admiralAkbar.forceSpirit = space
+        admiralAkbar.shootHandler = space
         space.add(object: admiralAkbar)
         
         // добавляем в игру Скайуокера и Звездный разрушитель
@@ -50,7 +50,7 @@ class GamePlay {
         
         let LukeSkywalkerPoint = Point.generate()
         let lukeSkywalker = LukeSkywalker(coordinate: LukeSkywalkerPoint)
-        lukeSkywalker.forceSpirit = space
+        lukeSkywalker.shootHandler = space
         lukeSkywalker.shootHandler = space
         space.add(object: lukeSkywalker)
         

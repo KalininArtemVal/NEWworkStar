@@ -25,10 +25,10 @@ struct LazerBlaster: Weapons {
 }
 
 
-//Добавить структуру FORCE: JEDIForce
+//Добавил структуру FORCE: JEDIForce
 struct Force: JEDIForce {
     var name: String = "Force"
-    var damage: Int = 100
+    var damage: Int = 1000
     var distance: Int = 10
     var rateOfFire: Int = 1
     var ammunition: Int = 1

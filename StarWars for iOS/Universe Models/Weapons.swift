@@ -13,6 +13,8 @@ protocol Armed {
     var force: [JEDIForce] { get }
 }
 
+
+
 protocol Shooting: Armed {
     func fire(to coordinate: Point) throws
     func useTheForce(to coordinate: Point) throws
@@ -41,6 +43,7 @@ extension Weapons {
         print("\nПульнул! А чем? \(name)")
     }
 }
+
 
 // Создали протокол Сила джедая
 protocol JEDIForce {

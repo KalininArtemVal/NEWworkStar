@@ -45,7 +45,7 @@ extension XWing: RadarObserver {
 }
 
 
-//Добавляем в класс Люка Скайуокера
+//Добавляем класс Люка Скайуокера
 class LukeSkywalker: StarshipImp {
     
     private enum Constants {
@@ -56,8 +56,8 @@ class LukeSkywalker: StarshipImp {
         super.init(name: "Luke Skywalker",
                    fraction: .jedi,
                    coordinate: coordinate,
-                   weapons: [Bomb(distance: 10), LazerBlaster(distance: 10)],
-                   force: [JEDIForce].init())
+                   weapons: [Bomb(distance: 10)],
+                   force: [Force].init())
         health = Constants.health
     }
     

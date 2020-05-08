@@ -85,7 +85,7 @@ class Radar: SpaceObject, Togglable {
         timer?.invalidate()
         timer = nil
     }
-  // Переключаем радар на поиск Адмирала Акбара
+  // Создаём возможность отслеживать и атаковать две фракции, а третью опозновать и не допускать огонь по своим
     @objc
     private func sendSignal() {
         let rect = Rect.generate()
@@ -96,10 +96,13 @@ class Radar: SpaceObject, Togglable {
                 starship.fraction == .rebels {
                 observer?.detected(object: starship)
             } else {
-                if let starship1 = objects.first as? StarshipImp,
-                starship1.fraction == .empare {
-                observer?.detected(object: starship1)
-            }
+                if let starshipEmpare = objects.first as? StarshipImp,
+                starshipEmpare.fraction == .empare {
+                observer?.detected(object: starshipEmpare)
+                }
+            };  if let starshipJedi = objects.first as? StarshipImp,
+                starshipJedi.fraction == .jedi {
+                print("\nСвои! Отставить огонь!")
             }
         }
     }

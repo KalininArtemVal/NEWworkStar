@@ -36,9 +36,12 @@ extension Starship where Self: Armed {
     }
 }
 
+
 // MARK: - Starship Base
 
 class StarshipImp: Starship, Shooting {
+    
+    
     
     // MARK: - Properties
     
@@ -58,6 +61,7 @@ class StarshipImp: Starship, Shooting {
     
     weak var shootHandler: ShootHandler?
     weak var forceSpirit: ForceSpirit?
+
     
     // MARK: - Lifecycle
     
@@ -96,4 +100,5 @@ class StarshipImp: Starship, Shooting {
         try force.useTheForce()
         forceSpirit?.useTheForce(from: force, to: coordinate)
     }
+    
 }
