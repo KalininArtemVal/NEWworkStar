@@ -18,8 +18,6 @@ class GamePlay {
         print("""
         Давным-давно... в далекой галактике...
         Star Wars
-        Episode IV
-        Новая Надежда
 
         """)
         
