@@ -44,7 +44,6 @@ extension Weapons {
     }
 }
 
-
 // Создали протокол Сила джедая
 protocol JEDIForce {
     var name: String { get }
@@ -65,7 +64,7 @@ extension JEDIForce {
         print("\(name) Исчерпал свою силу!")
             throw ForceError.isEmpty
         }
-        ammunition -= 100
+        ammunition -= 2
         print("\nИспользуй силу Люк!")
     }
 }
