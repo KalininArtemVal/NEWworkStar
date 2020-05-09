@@ -56,7 +56,7 @@ class LukeSkywalker: StarshipImp {
         super.init(name: "Luke Skywalker",
                    fraction: .jedi,
                    coordinate: coordinate,
-                   weapons: [Bomb(distance: 10)],
+                   weapons: [NewForce(distance: 10)],
                    force: [Force].init())
         health = Constants.health
     }
@@ -75,6 +75,12 @@ extension LukeSkywalker: RadarObserver {
         } catch {
             print("Ошибка не известна")
         }
+    }
+}
+//Делаем функцию для ответа на предложение перейти на тёмную сторону
+extension LukeSkywalker {
+    func sayNever(){
+           print("Никогда!\n")
     }
 }
 

@@ -32,6 +32,16 @@ class DeathStar: StarshipImp {
     }
 }
 
+enum VeiderError: Error {
+    case dontSayAnything
+}
+// добавляем расширение в DeathStar функцию
+extension DeathStar {
+    func doPermition() {
+        print("\nПереходи на тёмную сторону!\n")
+    }
+}
+
 //Добавляем крейсер "Звездный разрушитель"
 class StarDestroyer: StarshipImp {
     private enum Constants {
@@ -49,3 +59,4 @@ class StarDestroyer: StarshipImp {
         print("\(name) уничтожен! Империя пала!")
     }
 }
+

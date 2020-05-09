@@ -23,7 +23,13 @@ struct LazerBlaster: Weapons {
     var rateOfFire: Int = 60
     var ammunition: Int = 2
 }
-
+//делаем новое оружее Силу ЭКСПЕРИМЕНТ
+struct NewForce: Weapons {
+    var name: String = "Force"
+    var damage: Int = 50
+    var distance: Int = 10
+    var ammunition: Int = 5
+}
 
 //Добавил структуру FORCE: JEDIForce
 struct Force: JEDIForce {

@@ -85,6 +85,7 @@ extension Space: Displayable {
     }
 }
 
+// MARK: - ForceSpirit
 
 extension Space: ForceSpirit {
     func useTheForce(from force: JEDIForce, to coordinate: Point) {
