@@ -14,7 +14,6 @@ protocol Armed {
 }
 
 
-
 protocol Shooting: Armed {
     func fire(to coordinate: Point) throws
     func useTheForce(to coordinate: Point) throws
@@ -33,6 +32,8 @@ protocol Weapons {
     mutating func fire() throws
 }
 
+
+
 extension Weapons {
     mutating func fire() throws {
         guard ammunition > 0 else {
@@ -43,6 +44,7 @@ extension Weapons {
         print("\nПульнул! А чем? \(name)")
     }
 }
+
 
 // Создали протокол Сила джедая
 protocol JEDIForce {

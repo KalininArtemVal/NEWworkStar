@@ -40,7 +40,12 @@ class Space {
     
     private var objects = [SpaceObject]() {
         didSet {
-            // TODO: можно что-то сделать
+            // Проводим отслеживание количества космических обьектов и сообщаем пользователью по обнаружению
+            if oldValue.count >= 1 {
+                print("Обнаружен \(oldValue.count)-й обьект")
+            } else {
+                print("Провожу сканирование пространства...")
+            }
         }
     }
    
@@ -60,6 +65,7 @@ class Space {
     }
 }
 
+
 // MARK: - ShootHandler
 
 extension Space: ShootHandler {
@@ -74,6 +80,8 @@ extension Space: ShootHandler {
         }
     }
 }
+
+
 
 // MARK: - Displayable
 

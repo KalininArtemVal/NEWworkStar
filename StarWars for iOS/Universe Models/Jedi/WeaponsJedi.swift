@@ -23,7 +23,7 @@ struct LazerBlaster: Weapons {
     var rateOfFire: Int = 2
     var ammunition: Int = 2
 }
-//делаем новое оружее Силу ЭКСПЕРИМЕНТ
+//Делаем новое оружее Силу ЭКСПЕРИМЕНТ
 struct NewForce: Weapons {
     var name: String = "Force"
     var damage: Int = 50

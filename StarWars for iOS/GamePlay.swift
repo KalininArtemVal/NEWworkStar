@@ -22,14 +22,11 @@ class GamePlay {
         Новая Надежда
 
         """)
+        
         let deathStarPoint = Point.generate()
         let deathStar = DeathStar(coordinate: deathStarPoint)
         deathStar.shootHandler = space
         space.add(object: deathStar)
-        
-        //Призываем Люка на тёмную сторону
-        
-        deathStar.doPermition()
         
         let xWingPoint = Point.generate()
         let xWing = XWing(coordinate: xWingPoint)
@@ -56,6 +53,10 @@ class GamePlay {
         lukeSkywalker.forceSpirit = space
         lukeSkywalker.shootHandler = space
         space.add(object: lukeSkywalker)
+        
+        //Призываем Люка на тёмную сторону
+        
+        deathStar.doPermition()
         
         //Люк отвечает на призыв перейти на тёмную сторону
         

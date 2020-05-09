@@ -89,6 +89,7 @@ class StarshipImp: Starship, Shooting {
         try weapon.fire()
         shootHandler?.fire(from: weapon, to: coordinate)
     }
+    
     // Функция по применению Силы
     func useTheForce(to coordinate: Point) throws {
         guard

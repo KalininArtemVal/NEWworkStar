@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     private var gamePlay = GamePlay()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         gamePlay.play()
